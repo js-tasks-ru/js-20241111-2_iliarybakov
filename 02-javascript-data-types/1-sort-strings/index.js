@@ -9,9 +9,7 @@ export function sortStrings(arr, param = 'asc') {
     if(param === 'asc') {
         return sortedArray.sort((a,b) => a.localeCompare(b, undefined, {caseFirst: "upper"}))
     }
-    return sortedArray.sort((a,b) => b.localeCompare(b, ['ru', 'en'], {caseFirst: "upper"}))
+    return sortedArray.sort((a,b) => b.localeCompare(a, ['ru', 'en'], {caseFirst: "upper"}))
 }
 
-console.log(sortStrings(['b', 'a', 'c'], 'asc'));
-console.log(sortStrings(['b', 'a', 'c'], 'desc'));
 
